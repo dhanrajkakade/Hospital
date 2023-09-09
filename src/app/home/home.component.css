@@ -1,0 +1,178 @@
+
+/* ********************Carsouel*********************** */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=DM+Serif+Display&family=Patua+One&family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+
+
+.carousel-item img{
+    height: 100vh;
+    width: 100%;
+}
+
+/* .container-fluid{
+    margin: 55px 0px;
+    height: 20rem;
+}
+
+.container .carousel-caption{
+    margin-bottom: 18rem;
+} */
+
+.car-section{
+    width: 100%;
+    height: 100vh;
+}
+
+.car-container{
+    width: 100%;
+    height: 50vh;
+}
+
+.container .carousel-text h3{
+    margin-bottom: 2px;
+    font-size: 30px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-caption h4{
+    margin-bottom: 0px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.carousel-caption h3{
+    margin-bottom: 0px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.carousel-caption h1
+{
+    font-size: 60px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .carousel-caption p
+{
+    margin-top: 0px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-caption{
+    top:15%;
+    left:2%;
+    width: 56%;
+    height: 56%;
+    background-color: #000000a6;
+    border-radius: 15px;
+    padding: 45px;
+}
+
+
+.carousel-caption .box{
+    width: 55%;
+
+}
+
+.carousel-caption .btn-lg {
+    background-color: #bbe413;
+    list-style: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel-caption .btn-lg:hover{
+    background-color: white;
+    color: black;
+}
+
+.carimg{
+    display: flex;
+    justify-content: center;
+}
+
+.carimg img{ 
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+}
+
+
+.care{
+    top:39%;
+    left:8%;
+    width: 30%;
+    height: 50%;
+    background-color: #ffffffa6;
+    border-radius: 15px;
+    padding: 35px;
+}
+
+.butt{
+    padding: 10px;
+    background-color: #bbe413;
+    list-style: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-left: 70px;
+}
+
+.butt:hover{
+    background-color: white;
+    color: black;
+}
+
+.carousel-caption .heading2{
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+
+/* *************************************************************Cards************************************************************************ */
+
+.card{
+    margin: 0px 35px;
+    width: 90%;
+    height: 100%;
+    background: none;
+    border: none;
+
+}
+
+.card .card-body{
+    padding: 15px;
+    text-align: center;
+}
+
+.card p{
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.card i{
+    margin:55px;
+    font-size: 50px;
+    color: #000000;
+}
+
+.card-section{
+    padding: 20px 0px;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+

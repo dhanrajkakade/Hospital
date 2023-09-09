@@ -1,0 +1,38 @@
+
+<h2 class="center">DR. Details</h2>
+
+<table class="table table-danger">
+    <thead>
+      <tr>
+        <th>D_ID</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Specialist</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Phone</th>
+        <th>Dr_Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let dr of drs">
+      <tr>
+        <td>{{dr.did}}</td>
+        <td>{{dr.first_Name}}</td>
+        <td>{{dr.last_Name}}</td>
+        <td>{{dr.email}}</td>
+        <td>{{dr.password}}</td>
+        <td>{{dr.specialist}}</td>
+        <td>{{dr.gender}}</td>
+        <td>{{dr.age}}</td>
+        <td>{{dr.phone}}</td>
+        <td>{{dr.dr_Status}}</td>
+        <td><button (click)="update(dr)" class="btn btn-primary">Edit</button></td>
+        <td><button (click)="delete(dr.did)"class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=DM+Serif+Display&family=Patua+One&family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    height: 70px;
+    background-color: #000000d6;
+}
+
+.navbar-brand{
+    color: orange;
+}
+.navbar-collapse{
+    justify-content: end;
+    /* background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); */
+}
+
+.navbar span{
+    color: #ebff00;
+}
+
+.navbar img{
+    height: 50px;
+    width: 50px;
+    margin: 0px 20px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.navbar-brand{
+font-family:'Roboto', sans-serif;
+font-size: 20px;
+color: aliceblue;
+}
+
+.navbar-nav li a{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0px 10px;
+}
+
+.navbar-nav li a:hover{
+    background-color:rgb(255 245 0 / 89%);
+    border-radius: 0px 10px 0px;
+    color: black;
+}
+
+.navbar ul li{
+    justify-content: end;
+}
+
+.text-end button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.fa-solid{
+    margin: 0px 10px;
+
+}
+
+.navbar-collapse span{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+/* .navbar .container-fluid{
+    background-color: teal;
+}  */
+
+.dropdown-menu{
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+@media (max-width:1200px) {
+    #bt{
+        font-size: 13px;
+    }
+    
+    #bt1{
+        font-size: 13px;
+    }
+    
+    #bt2{
+        font-size: 13px;
+    }
+
+    .navbar-nav li a{
+        font-size: 13px;
+       
+    }
+}

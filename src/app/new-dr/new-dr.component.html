@@ -1,0 +1,299 @@
+<h2 class="center"> Register New Dr</h2>
+
+<form class="m-5" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+
+  <div class="mb-3 col-md-2 mb-4">
+    <label class="form-label">First Name</label>
+    <input formControlName="first_name" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <!-- <small *ngIf="regForm.get('first_name')?.invalid && regForm.get('first_name')?.touched" class="text-danger">First Name is Required</small> -->
+
+    <div *ngIf="regForm.get('first_name')?.invalid && regForm.get('first_name')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('first_name')?.hasError('required')">First Name is required</small>
+      <small class="text-danger" *ngIf="regForm.get('first_name')?.hasError('minlength')">Name is too short!</small>
+      <small class="text-danger" *ngIf="regForm.get('first_Name')?.hasError('spam')">First Name is Spam, Please enter
+        different Name! </small>
+    </div>
+
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Last Name</label>
+    <input formControlName="last_name" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <div *ngIf="regForm.get('last_name')?.invalid && regForm.get('last_name')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('last_name')?.hasError('required')">Last Name is required</small>
+      <small class="text-danger" *ngIf="regForm.get('last_name')?.hasError('minlength')">Name is too short!</small>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <div *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('email')?.hasError('required')">Email is required</small>
+      <small class="text-danger" *ngIf="regForm.get('email')?.hasError('email')">Email is too short!</small>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input formControlName="password" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <div *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('password')?.hasError('required')">Password is required</small>
+      <small class="text-danger" *ngIf="regForm.get('password')?.hasError('password')">Password is too short!</small>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Specialist</label>
+    <input formControlName="specialist" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <div *ngIf="regForm.get('specialist')?.invalid && regForm.get('specialist')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('specialist')?.hasError('required')">Specialist field is
+        required</small>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Gender</label>
+    <input formControlName="gender" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <small *ngIf="regForm.get('gender')?.invalid && regForm.get('gender')?.touched" class="text-danger">Gender is
+      required</small>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <input formControlName="age" type="number" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <small *ngIf="regForm.get('age')?.invalid && regForm.get('age')?.touched" class="text-danger">Age is
+      required</small>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input formControlName="phone" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <div *ngIf="regForm.get('phone')?.invalid && regForm.get('phone')?.touched">
+      <small class="text-danger" *ngIf="regForm.get('phone')?.hasError('required')">Phone number is required</small>
+      <small class="text-danger" *ngIf="regForm.get('phone')?.hasError('minlength')">Phone must be at least 10
+        characters long.</small>
+    </div>
+
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Dr. Status</label>
+    <input formControlName="dr_status" type="text" class="form-control" id="exampleInputInput1"
+      aria-describedby="emailHelp">
+
+    <small *ngIf="regForm.get('dr_status')?.invalid && regForm.get('dr_status')?.touched" class="text-danger">Dr_Status
+      is required</small>
+
+  </div>
+
+  <div formGroupName="address">
+
+    <div class="mb-3">
+      <label class="form-label">Street</label>
+      <input formControlName="street" type="text" class="form-control" id="exampleInputInput1"
+        aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">State</label>
+      <input formControlName="state" type="text" class="form-control" id="exampleInputInput1"
+        aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Country</label>
+      <input formControlName="country" type="text" class="form-control" id="exampleInputInput1"
+        aria-describedby="emailHelp">
+    </div>
+
+  </div>
+
+  <!-- {{regForm.value | json}} -->
+
+  <button
+    [class.disabled]="!(regForm.get('first_name')?.valid && regForm.get('last_name')?.valid && regForm.get('email')?.valid && regForm.get('password')?.valid && regForm.get('specialist')?.valid && regForm.get('gender')?.valid && regForm.get('age')?.valid && regForm.get('phone')?.valid && regForm.get('dr_status')?.valid && regForm.get('street')?.valid && regForm.get('state')?.valid && regForm.get('country')?.valid)"
+    class="btn btn-primary" type="submit">Submit
+
+  </button>
+</form>
+
+
+
+
+<!-- 
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img src="/assets/Images/drregister.jpg" alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h3 style="text-align: center;" class="mb-5 text-uppercase">Doctor registration form</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+
+                      <input formControlName="first_name" type="text" id="form3Example1m"
+                        class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1m">First Name</label>
+
+                       <small *ngIf="regForm.get('first_name')?.invalid && regForm.get('first_name')?.touched" class="text-danger">First Name is Required</small> 
+
+                      <div *ngIf="regForm.get('first_name')?.invalid && regForm.get('first_name')?.touched">
+                        <small class="text-danger" *ngIf="regForm.get('first_name')?.hasError('required')">First Name is
+                          required</small>
+                        <small class="text-danger" *ngIf="regForm.get('first_name')?.hasError('minlength')">Name is too
+                          short!</small>
+                        <small class="text-danger" *ngIf="regForm.get('first_Name')?.hasError('spam')">First Name is
+                          Spam, Please enter different Name! </small>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input formControlName="last_name" type="text" id="form3Example1n"
+                        class="form-control form-control-lg" />
+                      <label class="form-label" for="form3Example1n">Last Name</label>
+                      <div *ngIf="regForm.get('last_name')?.invalid && regForm.get('last_name')?.touched">
+                        <small class="text-danger" *ngIf="regForm.get('last_name')?.hasError('required')">Last Name is
+                          required</small>
+                        <small class="text-danger" *ngIf="regForm.get('last_name')?.hasError('minlength')">Name is too
+                          short!</small>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="form-outline mb-4">
+                  <input formControlName="email" type="text" id="form3Example1m1"
+                    class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example1m1">Email</label>
+                  <div *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">
+                    <small class="text-danger" *ngIf="regForm.get('email')?.hasError('required')">Email is
+                      required</small>
+                    <small class="text-danger" *ngIf="regForm.get('email')?.hasError('email')">Email is too
+                      short!</small>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                  <h6 class="mb-0 me-4">Gender: </h6>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
+                      value="option1" />
+                    <label class="form-check-label" for="femaleGender">Female</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                      value="option2" />
+                    <label class="form-check-label" for="maleGender">Male</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                      value="option3" />
+                    <label class="form-check-label" for="otherGender">Other</label>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select">
+                      <option value="1">State</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                  <div class="col-md-6 mb-4">
+
+                    <select class="select">
+                      <option value="1">City</option>
+                      <option value="2">Option 1</option>
+                      <option value="3">Option 2</option>
+                      <option value="4">Option 3</option>
+                    </select>
+
+                  </div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example8" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example8">Address</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example90" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example90">Pincode</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example99" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example99">Course</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example97" class="form-control form-control-lg" />
+                  <label class="form-label" for="form3Example97">Email ID</label>
+                </div>
+
+                <div class="d-flex justify-content-end pt-3">
+                  <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                  <button type="button" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

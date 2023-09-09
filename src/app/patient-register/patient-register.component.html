@@ -1,0 +1,32 @@
+<h2 class="center">Patient Registeration</h2>
+
+<table class="table table-danger">
+    <thead>
+      <tr>
+        <th>P_ID</th>
+        <th>Full Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Symptoms</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let pt of Pa">
+      <tr>
+        <td>{{pt.pid}}</td>
+        <td>{{pt.full_name}}</td>
+        <td>{{pt.age}}</td>
+        <td>{{pt.gender}}</td>
+        <td>{{pt.address}}</td>
+        <td>{{pt.phone}}</td>
+        <td>{{pt.email}}</td>
+        <td>{{pt.symptoms}}</td>
+        <td><button class="btn btn-primary">Edit</button></td>
+        <td><button (click)="delete(pt.pid)" class="btn btn-danger">Delete</button></td>
+      </tr>
+    </tbody>
+</table>

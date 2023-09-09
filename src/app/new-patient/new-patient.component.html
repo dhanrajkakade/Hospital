@@ -1,0 +1,43 @@
+<h2 class="center"> Register New Patient</h2>
+
+<form class="m-5" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+  
+  <div class="mb-3">
+    <label class="form-label">Full Name</label>
+    <input formControlName="full_name" type="text" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <br>
+    <input formControlName="age" type="number" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Address</label>
+    <br>
+    <input formControlName="address" type="text" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <br>
+    <input formControlName="phone" type="number" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <br>
+    <input formControlName="email" type="email" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Symptoms</label>
+    <br>
+    <input formControlName="symptoms" type="text" class="form-control" id="exampleInputInput1" aria-describedby="emailHelp">
+  </div>
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+

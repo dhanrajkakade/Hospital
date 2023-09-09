@@ -1,0 +1,59 @@
+
+<h2 class="center" >Update Dr.</h2>
+
+
+<form class="m-5" [formGroup]="updateForm" (ngSubmit)="submit()">
+
+
+    <div class="mb-3">
+      <label class="form-label">First Name : </label>
+      <input formControlName="first_name" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Last Name :</label>
+      <input formControlName="last_name" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email :</label>
+      <input formControlName="email" type="email" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Password :</label>
+      <input formControlName="password" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Specialist :</label>
+      <input formControlName="specialist" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Gender :</label>
+      <input formControlName="gender" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <!-- <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Married</label>
+    </div> -->
+
+    <div class="mb-3">
+      <label class="form-label">Age :</label>
+      <input formControlName="age" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone :</label>
+      <input formControlName="phone" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Dr Status :</label>
+      <input formControlName="dr_status" type="text" class="form-control" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
