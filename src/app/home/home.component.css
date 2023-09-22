@@ -2,8 +2,17 @@
 /* ********************Carsouel*********************** */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=DM+Serif+Display&family=Patua+One&family=Poppins:wght@600&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Black+Ops+One&family=DM+Serif+Display&family=Patua+One&family=Poppins:wght@600&family=Roboto:wght@700&family=Russo+One&display=swap');
 
+/* *{
+        margin: 0;
+        padding: 0;
 
+    }
+    body{
+        height: 100%;
+        width: 100%;
+    } */
 
 .carousel-item img{
     height: 100vh;
@@ -64,9 +73,9 @@
 }
 
 .carousel-caption{
-    top:15%;
+    top:13%;
     left:2%;
-    width: 56%;
+    width: 54%;
     height: 56%;
     background-color: #000000a6;
     border-radius: 15px;
@@ -75,7 +84,7 @@
 
 
 .carousel-caption .box{
-    width: 55%;
+    width: 90%;
 
 }
 
@@ -116,7 +125,7 @@
 }
 
 .butt{
-    padding: 10px;
+    padding: 15px;
     background-color: #bbe413;
     list-style: none;
     border-radius: 5px;
@@ -125,7 +134,8 @@
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: black;
-    margin-left: 70px;
+  
+    /* margin-left: 70px; */
 }
 
 .butt:hover{
@@ -175,4 +185,189 @@
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 }
 
+/* *********************************************************Why Choose Us?******************************************************************** */
 
+.row .row-cols-1{
+    margin-bottom: 30px;
+}
+
+.icon-square img{
+    height: 40px;
+    width: 40px;
+    
+}
+
+/****************************************************************Counter********************************************************************** */
+
+  /* section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section:first-child {
+    background-color: #aaa;
+  }
+  section:nth-child(2) {
+    background-color: #bbb;
+  }
+  section:nth-child(3) {
+    background-color: #ccc;
+  }
+  section:last-of-type {
+    background-color: #eee;
+  }
+  .nums {
+    width: 400px;
+    display: flex;
+  }
+  .nums .num {
+    flex: 1;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
+  } */
+
+/* ***********************************************************COUNT+++************************************************************ */
+
+.counter{
+height:350px;
+background-image:url(src\assets\Images\count.jpg) ;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+.count{
+ padding: 50px 0px;
+    
+}
+
+.c .nav-item .nav-link::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ffa600;
+    transform: scaleX(0);
+    border-radius: 10px;
+    transform-origin: center;
+    transition: transform 0.600s ease;
+  }
+  
+  .header_wrapper .nav-item .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .header_scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-white);
+    -webkit-box-shadow: 0 0.25rem 0.375rem rgba(12, 0, 46, .05);
+    box-shadow: 0 0.25rem 0.375rem rgba(12, 0, 46, .05);
+  }
+
+
+
+.count h1{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    padding: 15px 20px;
+    position: relative;
+  } 
+
+.count h3{
+    color:white;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+
+ .count h1:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    background: #ffc400;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    border-radius: 25px;
+  }
+.count h1:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+
+/* ***************************************************************Service******************************************************************** */
+
+.service{
+    background-color: ghostwhite;
+}
+
+.service .box{
+    gap: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+    justify-content:center;
+    padding: 0px 20px;
+}
+
+.service h2{
+    text-align: center;
+}
+
+p.text-center{
+    line-height: 30px;
+}
+
+.btn-lb {
+    background-color: #32c69a;
+    list-style: none;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-lb:hover{
+    background-color: white;
+    color: black;
+}
+
+.button-box{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* ****************************************************************Cards*************************************************************************** */
+
+.section-cardi .container-fluid .row .card{
+    width: 25rem;
+padding: 0px;       
+    /* border: 1px solid black ; */
+}
+
+.section-cardi .container-fluid{
+    padding: 30px;
+}
+.section-cardi .card img{
+    width:100%;
+    margin: 0px;
+    padding: 0px;
+    object-fit: fill;
+    height: 300px;
+}
+.section-cardi .container-fluid .row{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -20,9 +21,11 @@ export class LoginComponent {
   login(){
     if(this.loginForm.get('emailid')?.value==='prathmesh.s.kakade@gmail.com' && this.loginForm.get('password')?.value==='psk') {
       console.log("valid");
-      localStorage.setItem("loggedIn","true")
+      localStorage.setItem("loggedIn","true");
+      window.location.href="/dr-register";
     } else {
-      localStorage.setItem("loggedIn","false")
+      localStorage.setItem("loggedIn","false");
+      
 
     }
   }

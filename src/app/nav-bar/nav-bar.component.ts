@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EMPTY } from 'rxjs';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,8 +9,9 @@ import { Component } from '@angular/core';
 export class NavBarComponent {
   logout() {
     localStorage.clear()
+   window.location.href="/register"
   }
 
-  public isExact = {exact:true};
+  public isExact = {exact:false};
 
 }
